@@ -1,9 +1,11 @@
 CC      ?= gcc
 CFLAGS  += -std=c99 -pedantic -Wall -Wextra -Wno-discarded-qualifiers -I$(PREFIX)/include
 CFLAGS  += -D_POSIX_C_SOURCE=200112L
+CFLAGS  += $(shell pkg-config --cflags libnotify)
 LDFLAGS += -L$(PREFIX)/lib
 
 LIBS     = -lm -lpulse
+LIBS		 += $(shell pkg-config --libs libnotify)
 TARGET   = pavolume
 
 PREFIX    ?= /usr/local
