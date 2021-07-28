@@ -1,4 +1,4 @@
 *.o
 CMakeLists.txt
 cmake-build-debug/
-pavolume
+pavolumenotify
