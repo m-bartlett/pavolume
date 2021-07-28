@@ -2,7 +2,7 @@
 
 `pavolumenotify` is a volume control for [PulseAudio](https://www.freedesktop.org/wiki/Software/PulseAudio/) using [libnotify](https://developer.gnome.org/libnotify/) to show a volume meter notification.
 
-![https://user-images.githubusercontent.com/85039141/127269817-79b4f7f2-c5f8-4631-a771-ffa4c72f79ff.mp4]
+https://user-images.githubusercontent.com/85039141/127269907-95deea8e-6af2-4f13-aaef-60d7917bf676.mp4
 
 ## Compile and Install
 
