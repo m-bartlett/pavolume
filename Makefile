@@ -1,4 +1,4 @@
-CC      = g++
+CC      =  g++
 CFLAGS  += -std=c++17 -I$(PREFIX)/include
 CFLAGS  += -D_POSIX_C_SOURCE=200112L
 CFLAGS  += $(shell pkg-config --cflags libnotify)
@@ -6,15 +6,12 @@ LDFLAGS += -L$(PREFIX)/lib
 
 LIBS     = -lm -lpulse
 LIBS		 += $(shell pkg-config --libs libnotify)
-TARGET   = pavolume
+TARGET   = pavolumenotify
 
 PREFIX    ?= /usr/local
 BINPREFIX  = $(PREFIX)/bin
 
-default: $(TARGET)
-all: default
-
-OBJECTS = $(patsubst %.c, %.o, $(wildcard *.c))
+OBJECTS = $(patsubst %.cpp, %.o, $(wildcard *.cpp))
 
 all: $(TARGET)
 
@@ -22,14 +19,13 @@ debug: CFLAGS += -O0 -g
 debug: $(TARGET)
 
 $(TARGET):
-	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $@.c $(LIBS)
+	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $@.cpp $(LIBS)
 
 install:
-	mkdir -p "$(DESTDIR)$(BINPREFIX)"
-	cp -p $(TARGET) "$(DESTDIR)$(BINPREFIX)"
+	install -m 755 -D --target-directory "$(BINPREFIX)" "$(TARGET)"
 
 uninstall:
-	rm -f "$(DESTDIR)$(BINPREFIX)/$(TARGET)"
+	rm -f "$(BINPREFIX)/$(TARGET)"
 
 clean:
 	rm -f $(TARGET) $(OBJECTS)
