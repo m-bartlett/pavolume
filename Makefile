@@ -13,7 +13,7 @@ BINPREFIX  = $(PREFIX)/bin
 
 OBJECTS = $(patsubst %.cpp, %.o, $(wildcard *.cpp))
 
-all: $(TARGET)
+all: clean $(TARGET)
 
 debug: CFLAGS += -O0 -g
 debug: $(TARGET)

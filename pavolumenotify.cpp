@@ -13,10 +13,10 @@
 #include <wchar.h>
 #include <stdint.h>
 
-#define PROGRESS_SYMBOLS_LITERAL " ▎▍▌▋▊▉█"
+#define PROGRESS_SYMBOLS_LITERAL "░ ▎▍▌▋▊▉█"
 // #define PROGRESS_SYMBOLS_LITERAL "⣉⣏⣿"
 
-#define ENCLOSING_BAR_SYMBOLS_LITERAL "││"
+// #define ENCLOSING_BAR_SYMBOLS_LITERAL "││"
 // #define ENCLOSING_BAR_SYMBOLS_LITERAL "┥┝"
 
 #define VOLUME_MUTE_SYMBOL_LITERAL "婢"
