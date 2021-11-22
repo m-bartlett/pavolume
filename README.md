@@ -1,3 +1,11 @@
+---
+
+# 🚨 Archived 🚨 
+
+This project has been deprecated in favor of [pavol-dunst](https://github.com/m-bartlett/pavol-dunst) which uses native features in `dunst` to show better graphical progress bars instead of tacky unicode progress bars. Since I targetted this project at using dunst anyway, this spiritual successor will benefit from dunst-native features.
+
+---
+
 # pavolumenotify
 
 `pavolumenotify` is a volume control utility for [PulseAudio](https://www.freedesktop.org/wiki/Software/PulseAudio/) using [libnotify](https://developer.gnome.org/libnotify/) to show a volume meter notification.
